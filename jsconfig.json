@@ -1,0 +1,15 @@
+{
+  "compilerOptions": {
+    "baseUrl": ".",
+    "jsx": "react",
+    "paths": {
+      "@/*": ["./*"],
+      "components/*": ["./src/components/*"],
+      "public/*": ["./public/*"],
+      "data/*": ["./src/data/*"],
+      "utils/*": ["./src/utils/*"],
+      "lib/*": ["./src/lib/*"]
+    }
+  },
+  "exclude": ["node_modules", ".next"]
+}

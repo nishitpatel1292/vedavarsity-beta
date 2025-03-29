@@ -1,0 +1,9 @@
+# *
+User-agent: *
+Allow: /
+
+# Host
+Host: https://vedavarsity.com/
+
+# Sitemaps
+Sitemap: https://vedavarsity.com/sitemap.xml

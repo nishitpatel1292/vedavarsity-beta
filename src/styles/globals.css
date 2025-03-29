@@ -1,0 +1,195 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  /* Chrome, Safari, Edge, Opera */
+  input::-webkit-outer-spin-button,
+  input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+  }
+
+  /* Firefox */
+  input[type='number'] {
+    -moz-appearance: textfield;
+  }
+  @font-face {
+    font-family: 'AvertaStd';
+    font-style: normal;
+    font-weight: 400;
+    font-display: swap;
+    src: local(''), url(/fonts/regular.woff2) format('woff2');
+  }
+  @font-face {
+    font-family: 'AvertaStd';
+    font-style: normal;
+    font-weight: 600;
+    font-display: swap;
+    src: local(''), url(/fonts/semibold.woff2) format('woff2');
+  }
+  @font-face {
+    font-family: 'AvertaStd';
+    font-style: normal;
+    font-weight: 700;
+    font-display: swap;
+    src: local(''), url(/fonts/bold.woff2) format('woff2');
+  }
+  :root {
+    --background: 0 0% 100%;
+    --foreground: 0 0% 3.9%;
+    --navbar-banner:202, 100%, 14%;
+    --card: 0 0% 100%;
+    --card-foreground: 0 0% 3.9%;
+    --popover: 0 0% 100%;
+    --popover-foreground: 0 0% 3.9%;
+    --primary: 0 0% 9%;
+    --primary-foreground: 0 0% 98%;
+    --secondary: 0 0% 96.1%;
+    --secondary-foreground: 0 0% 9%;
+    --muted: 0 0% 96.1%;
+    --muted-foreground: 0 0% 45.1%;
+    --accent: 0 0% 96.1%;
+    --accent-foreground: 0 0% 9%;
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 0 0% 98%;
+    --border: 0 0% 89.8%;
+    --input: 0 0% 89.8%;
+    --ring: 0 0% 3.9%;
+    --chart-1: 12 76% 61%;
+    --chart-2: 173 58% 39%;
+    --chart-3: 197 37% 24%;
+    --chart-4: 43 74% 66%;
+    --chart-5: 27 87% 67%;
+    --radius: 0.5rem;
+    --color-1: 0 100% 63%;
+    --color-2: 270 100% 63%;
+    --color-3: 210 100% 63%;
+    --color-4: 195 100% 63%;
+    --color-5: 90 100% 63%;
+  }
+  .dark {
+    --background: 0 0% 3.9%;
+    --foreground: 0 0% 98%;
+    --card: 0 0% 3.9%;
+    --card-foreground: 0 0% 98%;
+    --popover: 0 0% 3.9%;
+    --popover-foreground: 0 0% 98%;
+    --primary: 0 0% 98%;
+    --primary-foreground: 0 0% 9%;
+    --secondary: 0 0% 14.9%;
+    --secondary-foreground: 0 0% 98%;
+    --muted: 0 0% 14.9%;
+    --muted-foreground: 0 0% 63.9%;
+    --accent: 0 0% 14.9%;
+    --accent-foreground: 0 0% 98%;
+    --destructive: 0 62.8% 30.6%;
+    --destructive-foreground: 0 0% 98%;
+    --border: 0 0% 14.9%;
+    --input: 0 0% 14.9%;
+    --ring: 0 0% 83.1%;
+    --chart-1: 220 70% 50%;
+    --chart-2: 160 60% 45%;
+    --chart-3: 30 80% 55%;
+    --chart-4: 280 65% 60%;
+    --chart-5: 340 75% 55%;
+    --color-1: 0 100% 63%;
+    --color-2: 270 100% 63%;
+    --color-3: 210 100% 63%;
+    --color-4: 195 100% 63%;
+    --color-5: 90 100% 63%;
+  }
+}
+.prose :where(a):not(:where([class~='not-prose'] *)) {
+  overflow-wrap: break-word;
+}
+@layer base {
+  * {
+    @apply border-border;
+  }
+  body {
+    @apply bg-background text-foreground;
+  }
+}
+
+.custom-shape-divider-top-1734807313 {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  overflow: hidden;
+  line-height: 0;
+}
+
+.custom-shape-divider-top-1734807313 svg {
+  position: relative;
+  display: block;
+  width: calc(100% + 1.3px);
+  height: 139px;
+  transform: rotateY(180deg);
+}
+
+.custom-shape-divider-top-1734807313 .shape-fill {
+  fill: #ffffff;
+}
+.custom-shape-divider-bottom-1734809648 {
+  position: absolute;
+  bottom: -40;
+  left: 0;
+  width: 100%;
+  overflow: visible;
+  line-height: 0;
+  transform: rotate(180deg);
+  transform: scale(-1, 1);
+  transform-origin: center;
+}
+
+.custom-shape-divider-bottom-1734809648 svg {
+  position: relative;
+  display: block;
+  width: calc(100% + 1.3px);
+  height: 139px;
+}
+
+.custom-shape-divider-bottom-1734809648 .shape-fill {
+  fill: #0d48be;
+}
+
+/* HTML: <div class="loader"></div> */
+.loader {
+  margin: 0 auto;
+  --r1: 154%;
+  --r2: 68.5%;
+  width: 60px;
+  aspect-ratio: 1;
+  border-radius: 50%;
+  background: radial-gradient(var(--r1) var(--r2) at top, #0000 79.5%, #feea29 80%),
+    radial-gradient(var(--r1) var(--r2) at bottom, #feea29 79.5%, #0000 80%),
+    radial-gradient(var(--r1) var(--r2) at top, #0000 79.5%, #feea29 80%), #ccc;
+  background-size: 50.5% 220%;
+  background-position: -100% 0%, 0% 0%, 100% 0%;
+  background-repeat: no-repeat;
+  animation: l9 2s infinite linear;
+}
+@keyframes l9 {
+  33% {
+    background-position: 0% 33%, 100% 33%, 200% 33%;
+  }
+  66% {
+    background-position: -100% 66%, 0% 66%, 100% 66%;
+  }
+  100% {
+    background-position: 0% 100%, 100% 100%, 200% 100%;
+  }
+}
+
+.slick-dots {
+  bottom: -35px !important;
+}
+
+#google-maps-display img {
+  max-width: none !important;
+  background: none !important;
+  font-size: inherit;
+  font-weight: inherit;
+}
