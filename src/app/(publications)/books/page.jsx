@@ -64,7 +64,7 @@ const Books = () => {
         hideSearch={true}
       />
       <section className="bg-darkcloud bg-pattern">
-        <div className="m-auto max-w-6xl space-y-[120px] px-4 py-16">
+        <div className="m-auto max-w-7xl space-y-[120px] px-4 py-16">
           <BookSection category={lang.en} title="English Books" />
           <BookSection category={lang.hi} title="Hindi Books" />
 

@@ -4,7 +4,7 @@ import { OutLink } from 'components/shared/Links';
 
 const Faq = () => {
   return (
-    <section className="prose prose-blue m-auto max-w-5xl px-4 py-10 md:py-12">
+    <section className="prose prose-blue m-auto max-w-7xl px-4 py-10 md:py-12">
       <h2 className="text-2xl font-semibold md:text-32px">Frequently Asked Questions</h2>
       <div className="mt-7 space-y-4 md:mt-10">
         <FaqCard question="How to attend a live session ?">

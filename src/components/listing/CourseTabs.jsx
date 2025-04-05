@@ -43,7 +43,7 @@ const CourseTabs = ({ courses, allTeachers, allCategories, enabledTabs, title, a
 
   return (
     <section className="bg-cloud">
-      <div className="relative m-auto max-w-6xl px-4 py-12">
+      <div className="relative m-auto max-w-7xl px-4 py-12">
         <Tabs selectedIndex={tabIndex} onSelect={(index) => setTabIndex(index)}>
           <div className="mb-4 flex items-center space-x-2">
             {/* Left Scroll Button */}

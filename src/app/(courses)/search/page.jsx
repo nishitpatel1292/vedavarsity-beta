@@ -58,7 +58,7 @@ function SearchCoursesContent() {
       ) : error ? (
         <h2 className="my-10 text-center text-2xl font-semibold text-red-500">{error}</h2>
       ) : searchBundles?.length > 0 ? (
-        <div className="m-auto max-w-6xl px-4 py-12">
+        <div className="m-auto max-w-7xl px-4 py-12">
           <div className="grid justify-center gap-8 md:grid-cols-2 md:gap-12 lg:grid-cols-3">
             {searchBundles.map((course) => (
               <CourseCard key={course.bundle_id} course={course} />

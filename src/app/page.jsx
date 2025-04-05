@@ -11,6 +11,7 @@ import CourseLibrary from '@/src/components/home/CourseLibrary';
 import axios from 'axios';
 import UniversitySection from '../components/home/UniversitySection';
 import CoursesSection from '../components/home/CoursesSection';
+import HeroSlider from '../components/home/HeroSlider';
 
 export default function Home() {
   const [bhaktiYogaCourses, setBhaktiYogaCourses] = useState([]);
@@ -72,7 +73,8 @@ export default function Home() {
 
   return (
     <>
-      <img width={'100%'} src="/hero_banner.jpg" alt="Hero Banner" />
+      {/* <img width={'100%'} src="/hero_banner.jpg" alt="Hero Banner" /> */}
+      <HeroSlider/>
       <UniversitySection/>
       <CoursesSection bhaktiYogaCourses={bhaktiYogaCourses}/>
       <CourseListingSection

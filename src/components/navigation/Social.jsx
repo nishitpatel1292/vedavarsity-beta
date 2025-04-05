@@ -5,10 +5,10 @@ export const Social = ({ className }) => {
   return (
     <ul className={className}>
       {socialLinks.map((each) => (
-        <li key={each.label}>
+        <li key={each.label} className='p-2 text-gray-300 rounded-full hover:text-primary hover:bg-white transition-all duration-300 ease-in-out'>
           <OutLink
             href={each.link}
-            className="text-white hover:text-primary"
+            className=""
             aria-label={each.label}
             title={each.label}
           >

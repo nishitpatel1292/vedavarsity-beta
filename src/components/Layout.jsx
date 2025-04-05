@@ -6,6 +6,7 @@ import Header from './navigation/Header';
 import { INST_URL, PORTAL_NAME } from '../data/constants';
 import { Footer } from './footer/footer';
 import logo from '../../public/inss-logo.png';
+import { usePathname } from 'next/navigation';
 const Layout = ({ children, className, SEO }) => {
   if (typeof window !== 'undefined') {
     var url = 'https://wati-integration-prod-service.clare.ai/v2/watiWidget.js?63473';
@@ -43,6 +44,10 @@ const Layout = ({ children, className, SEO }) => {
     var x = document.getElementsByTagName('script')[0];
     x.parentNode.insertBefore(s, x);
   }
+
+  const pathname = usePathname();
+  const isHome = pathname === '/';
+
   return (
     <React.Fragment>
       <iframe
@@ -65,7 +70,9 @@ const Layout = ({ children, className, SEO }) => {
       <div>
         <Toaster />
       </div>
-      <Header />
+      <div className="relative">
+        <Header isHome={isHome}/>
+      </div>
 
       <main className={className}>{children}</main>
       <Footer />

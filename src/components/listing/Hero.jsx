@@ -25,7 +25,7 @@ const Hero = ({ searchBased, subTitle, hideSearch = false, small = false, classN
     <section
       id="vanta-background"
       className={`vanta-background bg-black/75 bg-explore-hero bg-cover bg-no-repeat bg-blend-multiply  ${className}`}>
-      <div className={`m-auto max-w-6xl px-4 pb-5  ${small ? 'md:py-14' : 'md:pb-28 md:pt-28'}`}>
+      <div className={`m-auto max-w-7xl px-4 pb-5  ${small ? 'md:py-14' : 'md:pb-28 md:pt-28'}`}>
         <div className="max-w-[570px] space-y-6">
           <h1 className="text-32px font-bold capitalize text-white md:text-5xl">{searchBased}</h1>
           <p className="text-base text-white sm:text-lg">{subTitle}</p>

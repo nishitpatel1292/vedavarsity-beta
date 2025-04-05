@@ -7,7 +7,7 @@ const RelatedContent = ({ relatedCourses }) => {
   // console.log(relatedCourses);
   const swiperRef = useRef(null);
   return (
-    <section className="relative m-auto max-w-6xl px-3 py-12">
+    <section className="relative m-auto max-w-7xl px-3 py-12">
       <div className="mb-8">
         <h2 className=" text-2xl font-semibold md:text-32px">Related Content</h2>
       </div>

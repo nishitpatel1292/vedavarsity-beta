@@ -1,10 +1,10 @@
 const Price = ({ geoPrice }) => {
   return geoPrice != null ? (
-    <h2 className="text-28px font-semibold text-white md:text-32px">
-      {geoPrice.cost.replace(/\.00$/, '') > 0
-        ? geoPrice.position == 1
-          ? `${geoPrice.currency_symbol} ${geoPrice.cost.replace(/\.00$/, '')}`
-          : `${geoPrice.cost.replace(/\.00$/, '')} ${geoPrice.currency_symbol} `
+    <h2 className={`font-semibold text-black`}>
+      {Number(geoPrice?.cost) > 0
+        ? geoPrice?.position == 1
+          ? `${geoPrice?.currency_symbol}${String(geoPrice?.cost).replace(/\.00$/, '')}`
+          : `${String(geoPrice?.cost).replace(/\.00$/, '')} ${geoPrice.currency_symbol}`
         : 'Free'}
     </h2>
   ) : (

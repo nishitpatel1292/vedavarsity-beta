@@ -54,7 +54,7 @@ const courses = [
 export default function CourseLibrary() {
   return (
     <section>
-      <div className="m-auto max-w-6xl px-4 py-12">
+      <div className="m-auto max-w-7xl px-4 py-12">
         <span className="mb-3 text-28px font-bold md:mr-10 lg:text-38px">
           <SparklesText text={'Course Library'} sparklesCount={5} />
         </span>

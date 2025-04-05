@@ -31,7 +31,7 @@ export default function About() {
     <section className="bg-pattern">
       {/* Top Section */}
       <section className="bg-ice px-4 py-12 text-gray-800 md:py-20 lg:py-24">
-        <div className="mx-auto flex max-w-6xl flex-col items-center md:flex-row">
+        <div className="mx-auto flex max-w-7xl flex-col items-center md:flex-row">
           <div className="md:w-2/3">
             <h1 className="mb-6 text-4xl font-bold md:text-5xl">INSS</h1>
             <p className="mb-4 text-lg leading-relaxed text-gray-700">
@@ -58,7 +58,7 @@ export default function About() {
 
       {/* About Sections */}
       <section className="relative bg-ice py-12 text-gray-200 md:py-20 lg:py-24">
-        <div className="mx-auto max-w-6xl px-4">
+        <div className="mx-auto max-w-7xl px-4">
           <h2 className="mb-6 text-center text-3xl font-bold text-primary md:text-4xl">
             Know More About Us
           </h2>

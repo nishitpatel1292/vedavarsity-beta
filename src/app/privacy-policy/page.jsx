@@ -1,7 +1,7 @@
 const PrivacyPolicy = () => {
   return (
     <section className="bg-darkcloud bg-pattern">
-      <div className="m-auto max-w-6xl space-y-[120px] px-4 py-16">
+      <div className="m-auto max-w-7xl space-y-[120px] px-4 py-16">
         <div className="m-auto max-w-[800px] space-y-6	 text-lg font-normal text-navy ">
           <h1 className="text-3xl font-bold capitalize text-navy ">
             Privacy Policy for vedavarsity

@@ -49,7 +49,7 @@ export function TestimonialsCarousel() {
 
   return (
     <section className="bg-white py-12" id="testimonial">
-      <div className="relative m-auto max-w-6xl px-4">
+      <div className="relative m-auto max-w-7xl px-4">
         {/* Header */}
         <h2 className="mb-6 text-left text-28px font-bold lg:text-38px">
           <SparklesText text="Testimonials" sparklesCount={5} />

@@ -2,6 +2,7 @@
 
 import { useState } from "react"
 import { Calendar, Settings, GraduationCap, Presentation } from "lucide-react"
+import SectionTitle from "../shared/SectionTitle"
 
 export default function UniversitySection() {
   const [hoveredCard, setHoveredCard] = useState(null)
@@ -32,10 +33,7 @@ export default function UniversitySection() {
   return (
     <section className="py-16 px-4 max-w-7xl mx-auto">
       <div className="text-center mb-12">
-        <h2 className="text-2xl md:text-3xl font-extrabold text-[#0a3254] mb-4">
-          WELCOME TO UNIVERSITY
-          <div className="w-20 h-0.5 bg-[#0a3254] mx-auto mt-2"></div>
-        </h2>
+        <SectionTitle title={'WELCOME TO UNIVERSITY'}/>
         <p className="text-gray-600 max-w-3xl mx-auto">
           The Campus is an education platform that partners with top universities and organizations worldwide, to offer
           courses online for anyone to take.

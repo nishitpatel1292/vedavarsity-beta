@@ -15,7 +15,7 @@ const Testimonials = () => {
   const [focus, setFocus] = useState(false);
   return (
     <section className="bg-cloud" id="testimonial">
-      <div className="relative m-auto max-w-6xl px-4 py-12">
+      <div className="relative m-auto max-w-7xl px-4 py-12">
         <h2 className="text-center  text-28px font-bold  lg:text-38px">Testimonials</h2>
         <ul className="mx-auto my-8  grid max-w-4xl   grid-cols-2 gap-10 lg:grid-cols-4">
           {counter.map((each) => (

@@ -5,7 +5,7 @@ import CourseFilterTab from './CourseFilterTab';
 const CourseListingSection = ({ bhaktiYogaCourses, schoolOfLoveCourses, lifeStyleCourses }) => {
   return (
     <section className="bg-cloud" id="courses">
-      <div className="m-auto max-w-6xl px-4 py-12">
+      <div className="m-auto max-w-7xl px-4 py-12">
         <CategoryHeading libraryLink="/bhaktiyoga" title="Bhaktiyoga" />
         <CourseFilterTab instituteCourses={bhaktiYogaCourses} title="Bhaktiyoga" />
 

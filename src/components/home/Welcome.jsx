@@ -6,7 +6,7 @@ import { RainbowButton } from '@/components/ui/rainbow-button';
 
 const WelcomeSection = () => {
   return (
-    <section className="m-auto max-w-6xl px-4">
+    <section className="m-auto max-w-7xl px-4">
       <div
         style={{ backgroundImage: 'url(/hero_banner.jpg)' }}
         className="flex flex-col-reverse items-center justify-between md:flex-row">
