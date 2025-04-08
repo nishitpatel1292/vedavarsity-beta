@@ -9,8 +9,8 @@ export function ContactCard({ icon: Icon, title, subtitle, contact, isLink = fal
 
   return (
     <div className="flex flex-col items-center text-center">
-      <div className="mb-4 flex h-24 w-24 items-center justify-center rounded-full bg-blue-50">
-        <Icon className="h-10 w-10 text-blue-500" />
+      <div className="mb-4 flex h-20 w-20 items-center justify-center rounded-full border border-black">
+        <Icon className="h-8 w-8 text-black" />
       </div>
       <h3 className="mb-2 text-2xl font-bold text-gray-800">{title}</h3>
       <p className="mb-2 text-gray-600">{subtitle}</p>

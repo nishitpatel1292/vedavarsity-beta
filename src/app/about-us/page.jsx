@@ -35,7 +35,7 @@ export default function About() {
       <Hero title={'About Us'}/>
       <Breadcrumbs lastPath={'/about-us'}/>
       {/* Top Section */}
-      <section className="bg-ice px-4 py-12 text-gray-800 md:py-20 lg:py-24">
+      <section className="bg-ice px-4 py-12 text-gray-800 md:py-8 lg:py-12">
         <div className="mx-auto flex max-w-7xl flex-col items-center md:flex-row">
           <div className="md:w-2/3">
             <h1 className="mb-6 text-4xl font-bold md:text-5xl">INSS</h1>
@@ -62,13 +62,13 @@ export default function About() {
       </section>
 
       {/* About Sections */}
-      <section className="relative bg-ice py-12 text-gray-200 md:py-20 lg:py-24">
+      <section className="relative bg-ice py-12 text-gray-200 md:py-4 lg:py-6">
         <div className="mx-auto max-w-7xl px-4">
           <h2 className="mb-6 text-center text-3xl font-bold text-primary md:text-4xl">
             Know More About Us
           </h2>
           {contentData.map((section, index) => (
-            <div className="mb-8 md:mb-12" key={index}>
+            <div className="mb-4 md:mb-4" key={index}>
               <h3 className="mb-4 text-2xl font-bold text-sun">{section.title}</h3>
               <p className="leading-relaxed text-black">{section.content}</p>
             </div>

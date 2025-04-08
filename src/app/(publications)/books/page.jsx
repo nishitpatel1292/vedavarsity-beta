@@ -67,7 +67,7 @@ const Books = () => {
       <Hero title={'Books'}/>
       <Breadcrumbs lastPath={'books'}/>
       <section className="bg-darkcloud bg-pattern">
-        <div className="m-auto max-w-7xl space-y-[120px] px-4 py-16">
+        <div className="m-auto max-w-7xl space-y-[32px] px-4 py-4">
           <BookSection category={lang.en} title="English Books" />
           <BookSection category={lang.hi} title="Hindi Books" />
 
