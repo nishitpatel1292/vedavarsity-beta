@@ -13,6 +13,7 @@ import UniversitySection from '../components/home/UniversitySection';
 import CoursesSection from '../components/home/CoursesSection';
 import HeroSlider from '../components/home/HeroSlider';
 import OurTeachers from '../components/home/TeachersSection';
+import WhyChooseUs from '../components/home/WhyChooseUs';
 
 export default function Home() {
   const [bhaktiYogaCourses, setBhaktiYogaCourses] = useState([]);
@@ -89,6 +90,7 @@ export default function Home() {
         lifeStyleCourses={lifeStyleCourses}
       />
       <OurTeachers/>
+      <WhyChooseUs/>
       {/* <CourseLibrary /> */}
       <NewsLetterSection />
       <TestimonialsCarousel />
