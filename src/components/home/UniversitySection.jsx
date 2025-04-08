@@ -75,7 +75,7 @@ export default function UniversitySection() {
             >
               {card.description}
             </p>
-            <a
+            {/* <a
               href="#"
               className="uppercase font-bold text-sm tracking-wider mt-auto"
               style={{
@@ -83,7 +83,7 @@ export default function UniversitySection() {
               }}
             >
               Learn More
-            </a>
+            </a> */}
           </div>
         ))}
       </div>
