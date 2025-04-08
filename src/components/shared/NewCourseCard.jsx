@@ -16,6 +16,39 @@ export default function CourseCard({ course }) {
     position: course?.position,
     currency_symbol: course?.currency_symbol
   };
+
+  const renderStars = (rating) => {
+    const fullStars = Math.floor(rating); // Number of full stars
+    const hasHalfStar = rating % 1 >= 0.5; // Check if there's a half star
+    const emptyStars = 5 - fullStars - (hasHalfStar ? 1 : 0); // Remaining empty stars
+
+    return (
+      <div className="flex text-green-500">
+        {/* Full Stars */}
+        {Array(fullStars)
+          .fill(0)
+          .map((_, i) => (
+            <Star key={`full-${i}`} fill="currentColor" size={12} />
+          ))}
+
+        {/* Half Star */}
+        {hasHalfStar && <Star key="half" fill="none" size={12} stroke="currentColor" />}
+
+        {/* Empty Stars */}
+        {Array(emptyStars)
+          .fill(0)
+          .map((_, i) => (
+            <Star key={`empty-${i}`} fill="none" size={12} stroke="currentColor" />
+          ))}
+      </div>
+    );
+  };
+  const calculateDaysLeft = (startDate) => {
+    const today = dayjs();
+    const start = dayjs.unix(startDate);
+    const daysLeft = start.diff(today, 'day'); // Difference in days
+    return daysLeft > 0 ? `${daysLeft} Days Left` : '-';
+  };
   return (
     <Link
       href={`/course-details/${course.pretty_name}-${course.institution_bundle_id}`}
@@ -32,7 +65,7 @@ export default function CourseCard({ course }) {
           />
           {/* Green Badge */}
           <div className="gap- absolute right-2 top-2 flex flex-row bg-green-500 px-3 py-1 text-xs font-bold text-white">
-            <TimerIcon size={16} /> <span>10 Days</span>
+            <TimerIcon size={16} /> <span>{calculateDaysLeft(course.course_start_date)} Days</span>
           </div>
         </div>
 
@@ -49,9 +82,9 @@ export default function CourseCard({ course }) {
           <div className="mt-2 flex items-center justify-end gap-2">
             <span className="flex flex-row items-center gap-1 text-xs font-semibold md:text-sm">
               <Wallet className="inline-block" size={16} />{' '}
-              {course.package_cost_set == 1 && <Price geoPrice={geoPrice}  />}
+              {course.package_cost_set == 1 && <Price geoPrice={geoPrice} />}
             </span>
-            <div className="flex items-center gap-1 text-xs md:text-sm text-gray-500">
+            <div className="flex items-center gap-1 text-xs text-gray-500 md:text-sm">
               <span className="material-icons">
                 <BsPeople size={16} />
               </span>{' '}
@@ -72,13 +105,9 @@ export default function CourseCard({ course }) {
             <div className="mt-1 flex items-center">
               {/* Rating Stars */}
               <div className="felx-row flex text-green-500">
-                <Star fill="currentColor" size={12} />
-                <Star fill="currentColor" size={12} />
-                <Star fill="currentColor" size={12} />
-                <Star fill="currentColor" size={12} />
-                <Star size={12} />
+                {renderStars(course.rating)}
               </div>
-              <span className="ml-2 text-sm text-gray-500">4 review</span>
+              <span className="ml-2 text-sm text-gray-500">{course.num_of_rating} review</span>
             </div>
           </div>
 

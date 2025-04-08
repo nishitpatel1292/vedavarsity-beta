@@ -1,10 +1,12 @@
 'use client';
+import Hero from '@/src/components/all-teachers/Hero';
+import Breadcrumbs from '@/src/components/shared/Breadcrumbs';
 import { subTitles } from '@/src/data/courseSubTitles';
 import courseTypeMap from '@/src/data/courseTypeMap';
 import { categoriesID, languageTagID } from '@/src/data/tags';
 import axios from 'axios';
 import CourseTabs from 'components/listing/CourseTabs';
-import Hero from 'components/listing/Hero';
+// import Hero from 'components/listing/Hero';
 import { atom, useAtom } from 'jotai';
 import { useParams } from 'next/navigation';
 import { useEffect, useState } from 'react';
@@ -50,7 +52,6 @@ export default function CourseDescription() {
       console.error('Error fetching data:', err);
     }
   };
-
   useEffect(() => {
     console.log('Title:', title);
     if (title) {
@@ -60,7 +61,9 @@ export default function CourseDescription() {
 
   return (
     <>
-      <Hero subTitle={subTitles[title]} searchBased={title.split('-').join(' ')} />
+      <Hero title={title} />
+      <Breadcrumbs lastPath={title} />
+
       {vedavarsity.length > 0 && (
         <CourseTabs
           courses={filtered !== null ? filtered : vedavarsity}

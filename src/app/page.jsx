@@ -12,6 +12,7 @@ import axios from 'axios';
 import UniversitySection from '../components/home/UniversitySection';
 import CoursesSection from '../components/home/CoursesSection';
 import HeroSlider from '../components/home/HeroSlider';
+import OurTeachers from '../components/home/TeachersSection';
 
 export default function Home() {
   const [bhaktiYogaCourses, setBhaktiYogaCourses] = useState([]);
@@ -29,7 +30,7 @@ export default function Home() {
         );
 
         // Fetch course data
-        const [bhaktiYogaRes, selfPacedCoursesRes, schoolOfLoveCoursesRes, lifeStyleCoursesRes] =
+        const [bhaktiYogaRes, selfPacedCoursesRes, lifeStyleCoursesRes] =
           await Promise.all([
             axios.get(
               `${process.env.NEXT_PUBLIC_API_URL}/institute/${process.env.NEXT_PUBLIC_INST_ID}/courses?get_tutors=1&get_tags=1&get_student_count=1&categories_ids=${courseTypeMap['bhaktiyoga']}`
@@ -37,19 +38,24 @@ export default function Home() {
             axios.get(
               `${process.env.NEXT_PUBLIC_API_URL}/institute/${process.env.NEXT_PUBLIC_INST_ID}/courses?get_tutors=1&get_tags=1&get_student_count=1&categories_ids=${courseTypeMap['self-paced-courses']}`
             ),
-            axios.get(
-              `${process.env.NEXT_PUBLIC_API_URL}/institute/${process.env.NEXT_PUBLIC_INST_ID}/courses?get_tutors=1&get_tags=1&get_student_count=1&categories_ids=${courseTypeMap['school-of-love']}`
-            ),
+            // axios.get(
+            //   `${process.env.NEXT_PUBLIC_API_URL}/institute/${process.env.NEXT_PUBLIC_INST_ID}/courses?get_tutors=1&get_tags=1&get_student_count=1&categories_ids=${courseTypeMap['school-of-love']}`
+            // ),
+            // axios.get(
+            //   `${process.env.NEXT_PUBLIC_API_URL}/institute/${process.env.NEXT_PUBLIC_INST_ID}/courses?get_tutors=1&get_tags=1&get_student_count=1&categories_ids=${courseTypeMap['school-of-love']}`
+            // ),
             axios.get(
               `${process.env.NEXT_PUBLIC_API_URL}/institute/${process.env.NEXT_PUBLIC_INST_ID}/courses?get_tutors=1&get_tags=1&get_student_count=1&categories_ids=${courseTypeMap['lifestyle']}`
             )
           ]);
 
+          console.log(lifeStyleCoursesRes.data,'all')
+
         setBhaktiYogaCourses(bhaktiYogaRes.data?.institute_courses[0]?.course_bundles || []);
         setSelfPacedCourses(selfPacedCoursesRes.data?.institute_courses[0]?.course_bundles || []);
-        setSchoolOfLoveCourses(
-          schoolOfLoveCoursesRes.data?.institute_courses[0]?.course_bundles || []
-        );
+        // setSchoolOfLoveCourses(
+        //   schoolOfLoveCoursesRes.data?.institute_courses[0]?.course_bundles || []
+        // );
         setLifeStyleCourses(lifeStyleCoursesRes.data?.institute_courses[0]?.course_bundles || []);
 
         // Extract and parse community links
@@ -79,10 +85,11 @@ export default function Home() {
       <CoursesSection bhaktiYogaCourses={bhaktiYogaCourses}/>
       <CourseListingSection
         bhaktiYogaCourses={bhaktiYogaCourses}
-        schoolOfLoveCourses={schoolOfLoveCourses}
+        selfPacedCourses={selfPacedCourses}
         lifeStyleCourses={lifeStyleCourses}
       />
-      <CourseLibrary />
+      <OurTeachers/>
+      {/* <CourseLibrary /> */}
       <NewsLetterSection />
       <TestimonialsCarousel />
     </>

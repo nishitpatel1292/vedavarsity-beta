@@ -1,7 +1,8 @@
 'use client';
+import Hero from '@/src/components/all-teachers/Hero';
+import Breadcrumbs from '@/src/components/shared/Breadcrumbs';
 import { BookSection } from 'components/books/BookSection';
 import Layout from 'components/Layout';
-import Hero from 'components/listing/Hero';
 import { books, lang } from 'data/books';
 import { useState } from 'react';
 import { useForm } from 'react-hook-form';
@@ -54,7 +55,7 @@ const Books = () => {
   };
   return (
     <>
-      <Hero
+      {/* <Hero
         searchBased="Books"
         small={true}
         className={'bg-bottom'}
@@ -62,7 +63,9 @@ const Books = () => {
           'Read from our collection of Hindi and English books. For bulk purchase please contact us.'
         }
         hideSearch={true}
-      />
+      /> */}
+      <Hero title={'Books'}/>
+      <Breadcrumbs lastPath={'books'}/>
       <section className="bg-darkcloud bg-pattern">
         <div className="m-auto max-w-7xl space-y-[120px] px-4 py-16">
           <BookSection category={lang.en} title="English Books" />

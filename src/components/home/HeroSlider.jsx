@@ -67,12 +67,12 @@ export default function HeroSlider() {
             <div className="md:max-w-5xl px-4">
               <h3 className="text-3xl md:text-3xl lg:text-6xl font-bold text-white mb-2 capitalize">{slide.title}</h3>
               <h2 className="text-sm md:text-normal lg:text-md font-bold text-[#8BFF00] mb-6">{slide.subtitle}</h2>
-              <Link
+              {/* <Link
                 href={slide.buttonLink}
                 className="inline-block border-2 border-white hover:border-[#003580] hover:bg-[#003580] text-white font-medium py-2 px-4 md:py-3 md:px-8 transition-colors duration-300"
               >
                 {slide.buttonText}
-              </Link>
+              </Link> */}
             </div>
           </div>
         </div>

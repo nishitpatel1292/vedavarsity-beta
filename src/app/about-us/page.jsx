@@ -1,3 +1,6 @@
+import Hero from "@/src/components/all-teachers/Hero";
+import Breadcrumbs from "@/src/components/shared/Breadcrumbs";
+
 export default function About() {
   const contentData = [
     {
@@ -29,6 +32,8 @@ export default function About() {
 
   return (
     <section className="bg-pattern">
+      <Hero title={'About Us'}/>
+      <Breadcrumbs lastPath={'/about-us'}/>
       {/* Top Section */}
       <section className="bg-ice px-4 py-12 text-gray-800 md:py-20 lg:py-24">
         <div className="mx-auto flex max-w-7xl flex-col items-center md:flex-row">

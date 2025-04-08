@@ -19,12 +19,12 @@ const Navbar = ({ isScrolled, isHome }) => {
   const shouldOffset = isScrolled
   return (
     <>
-      {shouldOffset && <div className="h-20 md:h-[60px]" />}
+      {shouldOffset && isHome && <div className="h-20 md:h-[60px]" />}
       <nav
         className={`${
           isScrolled
             ? 'relative left-0 top-0 z-50 w-full bg-white shadow-md md:fixed'
-            : `relative ${isHome ? ' md:bg-white/80' : 'bg-white'}`
+            : `relative ${isHome ? ' md:bg-white/70' : 'bg-white'}`
         } bg-white  transition-all duration-1000  ${!isNavOpen && 'shadow-xl'}`}>
         <div className="m-auto flex h-20 max-w-7xl items-center justify-between px-3 md:h-[100px]">
           <Logo isBlack={true} />

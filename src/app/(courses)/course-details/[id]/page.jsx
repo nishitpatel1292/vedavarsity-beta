@@ -19,6 +19,7 @@ import { Loader } from 'lucide-react';
 import Breadcrumbs from '@/src/components/shared/Breadcrumbs';
 import Price from '@/src/components/shared/Price';
 import CourseCalendar from '@/src/components/course/Calender';
+import { schedTime } from '@/src/utils/hours';
 
 const Details = () => {
   const [courseDetails, setCourseDetails] = useState(null);
@@ -108,7 +109,11 @@ const Details = () => {
   if (loading)
     return (
       <div className="p-10">
-        <div className="loader"></div>
+        <div class="loader">
+          <div></div>
+          <div></div>
+          <div></div>
+        </div>
       </div>
     );
   if (error) return <p>{error}</p>;
@@ -162,7 +167,7 @@ const Details = () => {
     };
   });
 
-  console.log(formattedClasses, 'classes');
+  console.log(detailScheduleData?.classes[0].schedule[0], 'time');
 
   return (
     <>
@@ -199,9 +204,11 @@ const Details = () => {
               <div className="flex items-center gap-1 text-sm font-semibold text-gray-400">
                 Price: {courseDetails.bundle.package_cost_set == 1 && <Price geoPrice={geoPrice} />}
               </div>
-              <button className="bg-green-600 px-6 py-3 text-white transition-colors hover:bg-green-700">
+              <a
+                href={`${process.env.NEXT_PUBLIC_INST_URL}/course/${id}/checkout`}
+                className="bg-green-600 px-6 py-3 text-white transition-colors hover:bg-green-700">
                 TAKE THIS COURSE
-              </button>
+              </a>
             </div>
 
             <div className="my-6 border-t border-gray-200"></div>
@@ -218,9 +225,9 @@ const Details = () => {
           {/* Right Column - Content */}
           <div className="md:w-1/4">
             <div className="flex flex-col">
-              <div className='mb-4'>
+              <div className="mb-4">
                 <div className="mb-4">
-                  <h2 className="relative inline-block text-xl font-extrabold uppercase text-[#002B45] after:mt-1 after:block after:h-1 after:w-8 after:bg-[#002B45]">
+                  <h2 className="relative inline-block text-xl font-extrabold uppercase text-[#002B45] after:block after:h-1 after:w-8 after:bg-[#002B45]">
                     Categories
                   </h2>
                 </div>{' '}
@@ -233,28 +240,42 @@ const Details = () => {
                 </ul>
               </div>
               <CourseCalendar classDates={formattedClasses} />
+              <div className="mt-4">
+                <span>Class time: </span>
+                <time>
+                  {detailScheduleData?.classes[0]?.schedule[0]?.gmt_start_time &&
+                  detailScheduleData?.classes[0]?.schedule[0]?.gmt_end_time ? (
+                    <>
+                      {schedTime(detailScheduleData?.classes[0]?.schedule[0]?.gmt_start_time)} to{' '}
+                      {schedTime(detailScheduleData?.classes[0]?.schedule[0]?.gmt_end_time)}
+                    </>
+                  ) : (
+                    'Dates are not available for this course'
+                  )}
+                </time>
+              </div>
+              {relatedCourses.length > 0 && <RelatedContent relatedCourses={relatedCourses} />}
             </div>
           </div>
         </div>
       </section>
-      {/* <section className="bg-cloud">
-        <div className="m-auto max-w-5xl space-y-12 px-4 py-10 md:space-y-24 md:py-16">
-          <Schedule
+      <section>
+        <div className="m-auto max-w-7xl space-y-2 md:space-y-2 md:py-4">
+          {/* <Schedule
             courseDetails={courseDetails}
             courseSchedule={courseSchedule.master_batches[0]}
             detailSchedule={detailSchedule}
             regularClasses={getRegularClasses(courseDetails, 245)}
-          />
+          /> */}
           <Overview courseOverview={courseDetails.bundle} />
-          {fullCourseContent.course_curriculum?.resources?.length > 0 && (
+          {/* {fullCourseContent.course_curriculum?.resources?.length > 0 && (
             <CourseContent fullCourseContent={fullCourseContent} />
-          )}
+          )} */}
           <Teacher teacherDetails={courseSchedule.master_batches[0]} />
         </div>
-      </section> */}
+      </section>
 
       <Faq />
-      {relatedCourses.length > 0 && <RelatedContent relatedCourses={relatedCourses} />}
     </>
   );
 };

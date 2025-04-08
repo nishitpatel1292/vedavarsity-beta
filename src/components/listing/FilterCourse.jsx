@@ -84,7 +84,7 @@ const FilterCourse = ({ teachers, categories, languages, title }) => {
     <div className="mb-8 ">
       <div className="flex items-center space-x-3">
         <button
-          className="flex items-center space-x-2 rounded-xl bg-white px-3 py-2 shadow-md shadow-mist focus:ring-1"
+          className="flex items-center space-x-2  bg-white px-3 py-2 shadow-md shadow-mist focus:ring-1"
           onClick={() => setDropdownListOpen((open) => !open)}>
           <span>Filters</span>
           <RiArrowDownSLine

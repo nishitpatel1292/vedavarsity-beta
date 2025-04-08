@@ -4,7 +4,7 @@ import SectionTitle from '../shared/SectionTitle';
 const CoursesSection = ({ bhaktiYogaCourses }) => {
   console.log(bhaktiYogaCourses, 'courses');
   return (
-    <section className="px-4 py-16">
+    <section className="px-4">
       <div className="mx-auto max-w-7xl">
         <div className="mb-12 text-center">
           <SectionTitle title={'COURSES IN OUR UNIVERSITY'} />
@@ -13,11 +13,11 @@ const CoursesSection = ({ bhaktiYogaCourses }) => {
           </p>
         </div>
 
-        <div className="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-4">
+        {/* <div className="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-4">
           {bhaktiYogaCourses.map((course, index) => (
             <CourseCard key={index} course={course} />
           ))}
-        </div>
+        </div> */}
       </div>
     </section>
   );

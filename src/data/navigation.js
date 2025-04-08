@@ -1,7 +1,7 @@
 export const navLinks = [
   {
     link: '/',
-    label: 'home'
+    label: 'Home'
   },
   { link: '/bhaktiyoga', label: 'Bhaktiyoga' },
 

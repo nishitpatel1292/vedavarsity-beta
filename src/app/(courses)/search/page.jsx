@@ -4,6 +4,7 @@ import { useEffect, useState, Suspense } from 'react';
 import axios from 'axios';
 import Hero from '@/src/components/listing/Hero';
 import CourseCard from '@/src/components/shared/CourseCard';
+import NewCourseCard from '@/src/components/shared/NewCourseCard'
 import { useSearchParams } from 'next/navigation';
 
 function SearchCoursesContent() {
@@ -61,7 +62,7 @@ function SearchCoursesContent() {
         <div className="m-auto max-w-7xl px-4 py-12">
           <div className="grid justify-center gap-8 md:grid-cols-2 md:gap-12 lg:grid-cols-3">
             {searchBundles.map((course) => (
-              <CourseCard key={course.bundle_id} course={course} />
+              <NewCourseCard key={course.bundle_id} course={course} />
             ))}
           </div>
         </div>

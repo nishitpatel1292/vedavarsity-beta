@@ -92,10 +92,10 @@ const CourseCalendar = ({ classDates }) => {
   };
 
   return (
-    <div className="mx-auto w-full overflow-hidden rounded">
+    <div className="mx-auto mt-8 w-full overflow-hidden rounded">
       <div className="mb-4">
-        <h2 className="relative inline-block text-xl font-extrabold uppercase text-[#002B45] after:mt-1 after:block after:h-1 after:w-8 after:bg-[#002B45]">
-          Calendar
+        <h2 className="relative inline-block text-xl font-extrabold uppercase text-[#002B45] after:block after:h-1 after:w-8 after:bg-[#002B45]">
+          Schedule
         </h2>
       </div>{' '}
       {renderHeader()}

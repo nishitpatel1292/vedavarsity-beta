@@ -7,13 +7,13 @@ import Price from 'components/shared/Price';
 import { useParams } from 'next/navigation';
 import SectionTitle from '../shared/SectionTitle';
 
-const Hero = ({ courseDetails }) => {
+const Hero = ({title}) => {
 
   return (
     <section className=" bg-[#124356d1] bg-hero-pattern bg-cover bg-no-repeat bg-blend-multiply">
       <div className="flex justify-center items-center min-h-[60vh] px-4 py-12 ">
         <div className="max-w-[800px] space-y-6 uppercase">
-          <SectionTitle title={courseDetails.bundle.bundle_name} background='dark'/>
+          <SectionTitle title={title} background='dark'/>
           {/* {courseDetails.bundle.bundle_description && (
             <p className="text-white ">{courseDetails.bundle.bundle_description}</p>
           )} */}

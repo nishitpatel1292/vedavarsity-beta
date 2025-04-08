@@ -1,5 +1,6 @@
 'use client';
 import CourseCard from 'components/shared/CourseCard';
+import NewCourseCard from 'components/shared/NewCourseCard'
 import NoCourse from 'components/shared/NoCourse';
 import { atom, useAtom } from 'jotai';
 import { useRef, useState } from 'react';
@@ -74,7 +75,7 @@ const CourseTabs = ({ courses, allTeachers, allCategories, enabledTabs, title, a
               {tabsToShow.map((tab) => (
                 <Tab
                   key={tab.index}
-                  className={`cursor-pointer whitespace-nowrap rounded-full px-6 py-2 font-semibold capitalize transition-all duration-200 ${
+                  className={`cursor-pointer whitespace-nowrap px-6 py-2 font-semibold capitalize transition-all duration-200 ${
                     tabIndex === tab.index ? 'bg-primary text-white' : 'bg-gray-100 text-black'
                   } hover:bg-gray-200`}>
                   {tab.label}
@@ -128,7 +129,7 @@ const CourseTabs = ({ courses, allTeachers, allCategories, enabledTabs, title, a
                 </>
               ) : eachTab.allCoursesData.length > 0 ? (
                 eachTab.allCoursesData.map((course) => (
-                  <CourseCard key={course.bundle_id} course={course} title={title} />
+                  <NewCourseCard key={course.bundle_id} course={course} title={title} />
                 ))
               ) : (
                 <NoCourse />

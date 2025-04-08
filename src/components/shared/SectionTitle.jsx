@@ -3,7 +3,7 @@ import React from 'react';
 const SectionTitle = ({ title, background }) => {
   return (
     <h2
-      className={`mb-4 text-2xl text-center font-extrabold ${
+      className={`mb-4 text-2xl uppercase text-center font-extrabold ${
         background === 'dark' ? 'text-white' : 'text-[#0a3254]'
       }  md:text-3xl`}>
       {title}
