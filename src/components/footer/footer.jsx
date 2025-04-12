@@ -19,7 +19,7 @@ export function Footer() {
           <SocialLinks />
         </div>
       </div>
-      <div className="container flex flex-col justify-center mx-auto">
+      {/* <div className="container flex flex-col justify-center mx-auto">
         <span className="text-center text-xs md:text-sm">
           Dedicated To <br />
           <b className="text-primary">His Divine Grace A.C. Bhaktivedanta Swami Prabhupāda.</b>
@@ -29,7 +29,7 @@ export function Footer() {
           <b className="text-primary">Sri Srimad Gaur Krishna Das Goswami.</b>
         </span>
         <span className="mt-8  text-left mx-auto text-xs md:text-sm">© 2025 INSS All rights reserved.</span>
-      </div>
+      </div> */}
     </footer>
   );
 }

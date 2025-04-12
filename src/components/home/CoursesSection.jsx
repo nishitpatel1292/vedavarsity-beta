@@ -1,13 +1,12 @@
 import CourseCard from '../shared/NewCourseCard';
 import SectionTitle from '../shared/SectionTitle';
 
-const CoursesSection = ({ bhaktiYogaCourses }) => {
-  console.log(bhaktiYogaCourses, 'courses');
+const CoursesSection = ({ title }) => {
   return (
-    <section className="px-4">
+    <section className="px-4 mt-12">
       <div className="mx-auto max-w-7xl">
         <div className="mb-12 text-center">
-          <SectionTitle title={'COURSES IN OUR UNIVERSITY'} />
+          <SectionTitle title={title} />
           <p className="mt-4 text-gray-600">
             Find online courses and a wide range of related learning content.
           </p>

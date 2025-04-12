@@ -1,3 +1,4 @@
+import ContactForm from '@/src/components/contact/ContactForm';
 import { ContactSection } from '@/src/components/contact/ContactSection';
 import Location from 'components/contact/Location';
 
@@ -9,6 +10,7 @@ export default function Contact() {
   return (
     <>
       <ContactSection />
+      <ContactForm/>
       <Location />
     </>
   );

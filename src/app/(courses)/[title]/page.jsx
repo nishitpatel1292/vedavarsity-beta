@@ -59,10 +59,12 @@ export default function CourseDescription() {
     }
   }, [title]);
 
+  const formattedTitle = title === 'lifestyle' ? 'Vedic Lifestyle' : title.split('-').join(' ');
+
   return (
     <>
-      <Hero title={title} />
-      <Breadcrumbs lastPath={title} />
+      <Hero title={formattedTitle} />
+      <Breadcrumbs lastPath={formattedTitle} />
 
       {vedavarsity.length > 0 && (
         <CourseTabs

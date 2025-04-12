@@ -31,7 +31,7 @@ export default function UniversitySection() {
   ]
 
   return (
-    <section className="py-16 px-4 max-w-7xl mx-auto">
+    <section className="py-8 mt-12 px-4 max-w-7xl mx-auto">
       <div className="text-center mb-12">
         <SectionTitle title={'WELCOME TO UNIVERSITY'}/>
         <p className="text-gray-600 max-w-3xl mx-auto">
