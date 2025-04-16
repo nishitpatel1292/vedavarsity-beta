@@ -16,7 +16,7 @@ export function Navigation() {
       {[column1, column2].map((column, i) => (
         <ul key={i} className="space-y-2 text-center capitalize md:text-left">
           {column.map((link) => (
-            <li key={link.link}>
+            <li key={link.label}>
               <Link href={link.link} className="transition-colors hover:text-primary">
                 {link.label}
               </Link>

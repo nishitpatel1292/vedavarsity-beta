@@ -9,7 +9,7 @@ const defaultSEO = {
     type: 'website',
     locale: 'en_US',
     url: mainURL, //TODO: Change this on Domain name change
-    site_name: 'INSS',
+    site_name: 'Vedavarsity',
     images: [
       {
         url: `${mainURL}/inss-logo.png`

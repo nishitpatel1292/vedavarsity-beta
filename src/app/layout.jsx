@@ -16,7 +16,7 @@ export const metadata = {
     type: 'website',
     locale: 'en_US',
     url: mainURL,
-    site_name: 'INSS',
+    site_name: 'Vedavarsity',
     images: [
       {
         url: `${mainURL}/inss-logo.png`

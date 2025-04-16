@@ -102,11 +102,11 @@ export default function OurTeachers() {
       </p>
 
       <div className="grid gap-10 md:grid-cols-2">
-        {[...Array(4)].map((_, i) => (
+        {teachers.slice(0, 4).map((teacher, i) => (
           <div key={i} className="flex items-start gap-6">
             <div className="group relative h-48 w-48 min-w-[12rem] overflow-hidden">
               <Image
-                src={teachers[0].image || ''}
+                src={teacher.image || ''}
                 alt="Teacher"
                 width={192}
                 height={192}
@@ -127,19 +127,22 @@ export default function OurTeachers() {
             </div>
 
             <div>
-              <h3 className="text-lg font-semibold">{teachers[0].name}</h3>
-              <p className="mt-1 text-sm uppercase text-gray-500">Motivational Speaker</p>
-              <p className="mt-3 line-clamp-4 text-sm text-gray-700">{teachers[0].bio}</p>
-              <div className='mt-4 bg-gray-100 px-4 py-2 text-sm transition hover:bg-gray-200 w-fit'>
-                <Link
-                  href={`teacher/${teachers[0].key}`}
-                  className="">
+              <h3 className="text-lg font-semibold">{teacher.name}</h3>
+              {/* <p className="mt-1 text-sm uppercase text-gray-500">Motivational Speaker</p> */}
+              <p className="mt-3 line-clamp-4 text-sm text-gray-700">{teacher.bio}</p>
+              <div className="mt-4 w-fit bg-gray-100 px-4 py-2 text-sm transition hover:bg-gray-200">
+                <Link href={`teacher/${teacher.key}`} className="">
                   VIEW PROFILE
                 </Link>
               </div>
             </div>
           </div>
         ))}
+      </div>
+      <div className='mt-8 w-full flex justify-center'>
+        <Link href={'/all-teachers'} className="w-fit rounded bg-blue-600 px-4 py-2 text-white hover:bg-blue-700 select-none">
+          View All
+        </Link>
       </div>
     </section>
   );

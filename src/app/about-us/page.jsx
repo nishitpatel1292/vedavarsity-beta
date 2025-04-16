@@ -1,60 +1,69 @@
-import Hero from "@/src/components/all-teachers/Hero";
-import Breadcrumbs from "@/src/components/shared/Breadcrumbs";
+import Hero from '@/src/components/all-teachers/Hero';
+import Breadcrumbs from '@/src/components/shared/Breadcrumbs';
 
 export default function About() {
   const contentData = [
     {
-      title: 'Learn',
+      title: 'Rooted in Authenticity',
       content:
-        'Vedavarsity will provide vedic education by helping our audience to understand the whys, whats and hows of Sanatana dharma'
+        'Our foundation is firmly grounded in the teachings of His Divine Grace A.C. Bhaktivedanta Swami Prabhupāda, the founder of ISKCON and one of the most respected spiritual leaders of the modern era. Every course, class, and teaching offered on Vedavarsity reflects the pure and unaltered essence of Gaudiya Vaishnava philosophy, inspired by our guiding light, Sri Srimad Gaur Krishna Das Goswami.'
     },
     {
-      title: 'Practice',
+      title: 'Expert-Led Courses',
       content:
-        "For growing spiritually, we encourage the practical application of the knowledge into action in our daily lives. Making Srimad Bhagavatam a guiding light, we want to help people integrate the Bhagavatam's wisdom into every aspect of their lives."
+        'Vedavarsity brings together a team of experienced and spiritually mature teachers who are not only knowledgeable in scripture but are also committed practitioners of what they teach. Our instructors include disciples and followers of Srila Prabhupāda who have spent years studying and living the teachings of the Bhagavatam, Bhagavad Gita, Upanishads, and other Vedic scriptures.'
     },
     {
-      title: 'Share',
+      title: 'Diverse and Relevant Curriculum',
       content:
-        'Finally, Cultivating a love for Srimad Bhagavatam, We want to ignite a passion for learning this sacred scripture.'
+        'We offer a wide range of certificate and diploma programs across various subjects including:\n\n- Bhakti Yoga and Devotional Practices\n- Vedic History and Puranas\n- Sanskrit Language Courses\n- Lifestyle and Ayurvedic Wisdom\n- Marriage and Family Life in Krishna Consciousness\n- Parenting the Vedic Way\n- Science and Spirituality\n\nEach course is designed to not just inform but transform. Whether you\'re looking to apply these teachings to your personal life or share them with others, Vedavarsity equips you with knowledge and practical tools.'
     },
     {
-      title: 'Who are our teachers?',
+      title: 'Learn at Your Own Pace',
       content:
-        'Our speakers and teachers are well versed with the topics of We equip devotees with the skills to share Vaisnava knowledge, practices, and values through seminars and lectures.'
+        'All our courses are delivered online with flexible scheduling, making it easy for you to learn at your own pace. Whether you\'re a student, working professional, homemaker, or a full-time devotee, you can integrate learning into your lifestyle with ease.'
     },
     {
-      title: 'Join us and be a Beacon of Knowledge',
+      title: 'Affordable Spiritual Education',
       content:
-        'Whether you’re looking to enhance your own understanding of Vaisnava philosophy or hoping to share it with others, our seminars and lectures will provide you with the tools, knowledge, and confidence to do so effectively. Join us to spread the teachings of Srimad Bhagavatam.'
+        'We believe that spiritual wisdom should never be out of reach. That’s why all our programs are affordably priced. We aim to serve, not to profit. The small course fees help us maintain high standards while reaching seekers around the world.'
+    },
+    {
+      title: 'Certified Programs',
+      content:
+        'Upon completion of any course, you receive a certificate that recognizes your efforts and progress. These certifications can also support your service in temples, spiritual organizations, or simply add credibility to your spiritual practice and sharing.'
+    },
+    {
+      title: 'A Growing Spiritual Community',
+      content:
+        'When you join Vedavarsity, you’re not just signing up for a course — you’re becoming part of a global community of sincere seekers. Our students are connected by a shared desire to understand Vedic wisdom and live it in daily life. Engage in discussions, satsangs, and even collaborative service opportunities.'
     }
   ];
 
   return (
     <section className="bg-pattern">
-      <Hero title={'About Us'}/>
-      <Breadcrumbs lastPath={'/about-us'}/>
+      <Hero title={'About Us'} />
+      <Breadcrumbs lastPath={'/about-us'} />
       {/* Top Section */}
       <section className="bg-ice px-4 py-12 text-gray-800 md:py-8 lg:py-12">
         <div className="mx-auto flex max-w-7xl flex-col items-center md:flex-row">
           <div className="md:w-2/3">
-            <h1 className="mb-6 text-4xl font-bold md:text-5xl">INSS</h1>
+            <h1 className="mb-6 text-4xl font-bold md:text-5xl">VEDAVARSITY</h1>
             <p className="mb-4 text-lg leading-relaxed text-gray-700">
-              Vedavarsity is founded with the aim of creating a space for the spiritually curious
-              minds who wish to learn, practice, and share the teachings of Srimad Bhagavatam. We
-              also delve into the writings of Gaudiya Vaisnava acaryas and explore various branches
-              of Vedic knowledge, including philosophy, culture, yoga, ayurveda, astrology, music,
-              and science. All our courses are based on the teachings of His Divine Grace A.C.
-              Bhaktivedanta Swami Prabhupada. Vedavarsity’s office is located in Vrindavan, and our
-              mission is to spread the message of Srimad-Bhāgavatam and Caitanya-caritāmṛta far and
-              wide.
+              In a world full of information overload and spiritual confusion, finding a reliable
+              and authentic source of Vedic wisdom can be challenging. Vedavarsity is here to change
+              that. At Vedavarsity, we are committed to delivering timeless spiritual knowledge in a
+              format that's modern, engaging, and deeply rooted in tradition. Whether you're a
+              beginner exploring Vedic teachings or a dedicated practitioner seeking deeper
+              understanding, Vedavarsity is your trusted companion on the journey of
+              self-realization.
             </p>
           </div>
           <div className="text-center md:w-1/3">
             {/* Placeholder for Logo */}
             <img
-              src="/inss.png"
-              alt="INSS Logo"
+              src="/inss-logo.png"
+              alt="VEDAVARSITY Logo"
               className="mx-auto h-48 w-48 object-contain md:h-64 md:w-64"
             />
           </div>
@@ -70,7 +79,7 @@ export default function About() {
           {contentData.map((section, index) => (
             <div className="mb-4 md:mb-4" key={index}>
               <h3 className="mb-4 text-2xl font-bold text-sun">{section.title}</h3>
-              <p className="leading-relaxed text-black">{section.content}</p>
+              <p className="leading-relaxed text-black whitespace-pre-line">{section.content}</p>
             </div>
           ))}
         </div>

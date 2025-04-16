@@ -1,6 +1,7 @@
 'use client';
 import { useEffect, useState } from 'react';
 import CourseFilterTab from './CourseFilterTab';
+import axios from 'axios';
 // import CourseTabView from './CourseTabView';
 
 const CourseListingSection = ({ bhaktiYogaCourses, schoolOfLoveCourses, lifeStyleCourses }) => {

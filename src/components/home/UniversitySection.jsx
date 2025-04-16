@@ -1,78 +1,76 @@
-"use client"
+'use client';
 
-import { useState } from "react"
-import { Calendar, Settings, GraduationCap, Presentation } from "lucide-react"
-import SectionTitle from "../shared/SectionTitle"
+import { useState } from 'react';
+import { Calendar, Settings, GraduationCap, Presentation } from 'lucide-react';
+import SectionTitle from '../shared/SectionTitle';
 
 export default function UniversitySection() {
-  const [hoveredCard, setHoveredCard] = useState(null)
+  const [hoveredCard, setHoveredCard] = useState(null);
 
   const cards = [
     {
       icon: Calendar,
-      title: "Program",
-      description: "The technical writing profession is continuously evolving as technical logitech...",
+      title: 'Programs',
+      description:
+        'Deepen your spiritual journey with courses in Bhakti Yoga, Vedic history, lifestyle, and more.'
     },
     {
       icon: Settings,
-      title: "Affordability",
-      description: "We're committed to your success, and part of that is providing a quality...",
+      title: 'Affordability',
+      description: 'Quality education at prices that are accessible to all.'
     },
     {
       icon: GraduationCap,
-      title: "Certification",
-      description: "Professional certificates add valuable credentials to a resume by showing logitech...",
+      title: 'Certification',
+      description: 'Earn recognized certificates as you grow in wisdom and practice'
     },
     {
       icon: Presentation,
-      title: "Courses",
-      description: "If you want the convenience of self-study, but still want to select course...",
-    },
-  ]
+      title: 'Courses',
+      description: 'Explore a variety of topics—from Gita and Bhagavatam to Sanskrit and spiritual relationships.'
+    }
+  ];
 
   return (
-    <section className="py-8 mt-12 px-4 max-w-7xl mx-auto">
-      <div className="text-center mb-12">
-        <SectionTitle title={'WELCOME TO UNIVERSITY'}/>
-        <p className="text-gray-600 max-w-3xl mx-auto">
-          The Campus is an education platform that partners with top universities and organizations worldwide, to offer
-          courses online for anyone to take.
+    <section className="mx-auto mt-12 max-w-7xl px-4 py-8">
+      <div className="mb-12 text-center">
+        <SectionTitle title={'WELCOME TO VEDAVARSITY'} />
+        <p className="mx-auto max-w-3xl text-gray-600">
+          Hare Krishna! Welcome to Vedavarsity, your spiritual learning home. Dive into the wisdom
+          of the Vedas, Bhagavatam, and Bhakti Yoga with expert teachers and inspiring courses.
+          Learn. Practice. Share. Let devotion and knowledge transform your life.
         </p>
       </div>
 
-      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mt-8">
+      <div className="mt-8 grid grid-cols-1 gap-6 md:grid-cols-2 lg:grid-cols-4">
         {cards.map((card, index) => (
           <div
             key={index}
-            className="flex flex-col items-center text-center p-6 transition-all duration-300 h-full"
+            className="flex h-full flex-col items-center p-6 text-center transition-all duration-300"
             style={{
-              backgroundColor: hoveredCard === index ? "#6cc51d" : "white",
+              backgroundColor: hoveredCard === index ? '#6cc51d' : 'white'
             }}
             onMouseEnter={() => setHoveredCard(index)}
-            onMouseLeave={() => setHoveredCard(null)}
-          >
+            onMouseLeave={() => setHoveredCard(null)}>
             <div
-              className="mb-4 p-3 rounded-full"
+              className="mb-4 rounded-full p-3"
               style={{
-                color: hoveredCard === index ? "white" : "#9ca3af",
-              }}
-            >
+                color: hoveredCard === index ? 'white' : '#9ca3af'
+              }}>
               <card.icon size={40} />
             </div>
             <h3
-              className="text-xl font-semibold mb-3"
+              className="mb-3 text-xl font-semibold"
               style={{
-                color: hoveredCard === index ? "white" : "#0a3254",
-              }}
-            >
+                color: hoveredCard === index ? 'white' : '#0a3254'
+              }}>
               {card.title}
             </h3>
             <p
               className="mb-6 flex-grow"
               style={{
-                color: hoveredCard === index ? "white" : "#4b5563",
-              }}
-            >
+                color: hoveredCard === index ? 'white' : '#4b5563'
+              }}>
               {card.description}
             </p>
             {/* <a
@@ -88,6 +86,5 @@ export default function UniversitySection() {
         ))}
       </div>
     </section>
-  )
+  );
 }
-
