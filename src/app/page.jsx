@@ -100,7 +100,7 @@ export default function Home() {
       <NewsLetterSection />
       <OurTeachers/>
       <WhyChooseUs/>
-      <EventsNewsSection/>
+      {/* <EventsNewsSection/> */}
       {/* <CourseLibrary /> */}
       <TestimonialsCarousel />
     </>
